@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta&family=Roboto+Slab&family=Ubuntu&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Mukta', sans-serif;
+}
+
+
+/* utility classes */
+a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Navigation Bar */
+.navbar{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    font-weight: bold;
+    padding: 2px 20px 0; 
+    background: white;
+    box-shadow: 0 4px 10px 0 gainsboro;
+}
+
+.navbar .nav-middle ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .nav-middle ul li{
+    list-style: none;
+}
+
+.navbar .nav-middle ul li a{
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px 50px;
+}
+
+.navbar .nav-left .logo img{
+    height: 4rem;
+    width: 4rem;
+}
+
+.navbar img{
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.navbar .nav-right a{
+        flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.navbar .nav-right a img{
+    margin: 0 10px;
+}
+
+
+/* Image Animation slider */
+
+#image-slider{
+    margin-top:3rem;
+}
+
+.container{
+    padding: 0;
+}
+
+.row{
+    height: 70vh;
+}
+
+.row div h4, i {
+    color: #fff;
+}
+
+.row div h4{
+font-weight: bold;
+margin: 1.8rem;
+    
+}
+
+i{
+    position: absolute;
+    top: 1.8rem;
+    right: 1.3rem;
+    font-size: 1.7rem;
+    visibility: hidden;
+}
+
+.visible{
+    visibility:visible;
+}
+
+.row #strength-img, .row #drills-img, .row #mobility-img{   
+    position: relative;
+    transition: 1s;
+  }
+
+  .row #drills-img::before, .row #mobility-img::before, .row #strength-img::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    filter: saturate(50%), contrast(1);
+    left: 0;
+  }
+
+  .row #drills-img::before {
+    
+    background: url(./image/drills.jpg) no-repeat center center/cover;
+    border-radius: 0 20px 20px 0;
+  
+  }
+  
+  .row #mobility-img::before {
+    background: url(./image/mobility.jpg) no-repeat center center/cover;
+  
+  }
+  
+  .row #strength-img::before {
+    background: url(./image/strength.jpg) no-repeat center center/cover;
+    border-radius: 20px 0 0 20px;
+  }
+  
